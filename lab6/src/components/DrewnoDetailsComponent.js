@@ -11,7 +11,7 @@ class DrewnoDetailsComponent extends Component {
 
     increaseDrewnoIndex() {
         this.setState({
-            drewnoIndex: this.state.drewnoIndex === this.props.drewno.length - 1 ?
+            drewnoIndex: this.state.drewnoIndex === this.props.drzewa.length - 1 ?
                             0 :
                             this.state.drewnoIndex + 1
         });
@@ -30,11 +30,11 @@ class DrewnoDetailsComponent extends Component {
             <table>
                 <tr>
                     <td>Gatunek</td>
-                    <td>{this.props.drewno[this.state.drewnoIndex].gatunek}</td>
+                    <td>{this.props.drzewa[this.state.drewnoIndex].gatunek}</td>
                 </tr>
                 <tr>
                     <td>Długość</td>
-                    <td>{this.props.drewno[this.state.drewnoIndex].dlugosc}</td>
+                    <td>{this.props.drzewa[this.state.drewnoIndex].dlugosc}</td>
                 </tr>
             </table>
         )

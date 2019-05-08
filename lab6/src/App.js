@@ -13,8 +13,8 @@ class App extends Component {
     return (
       <div className="App">
         <header className="App-header">
-          <DrewnoListComponent drewno={drewnoModule.getAll()}/>
-          <DrewnoDetailsComponent drewno={drewnoModule.getAll()}/>
+          <DrewnoListComponent drzewa={drewnoModule.getAll()}/>
+          <DrewnoDetailsComponent drzewa={drewnoModule.getAll()}/>
           <p>
             Edit <code>src/App.js</code> and save to reload.
           </p>
