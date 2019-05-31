@@ -1,32 +1,23 @@
 import React, { Component } from 'react';
 import './App.css';
-import './components/TigerListComponent'
-import tigersModule from './services/tigersModule'
-import TigerListComponent from './components/TigerListComponent';
-import Toy from './models/Toy'
-import TigerDetailsComponent from './components/TigerDetailsComponent';
+import './components/DrewnoListComponent'
+import drewnoModule from './services/drewnoModule'
+import DrewnoListComponent from './components/DrewnoListComponent';
+import Klasa from './models/Klasa'
+import DrewnoDetailsComponent from './components/DrewnoDetailsComponent';
 
 class App extends Component {
-
-  constructor(props) {
-    super(props);
-    tigersModule.create("Staś", 99, true, [new Toy("Piłka kauczukowa")]);
-    tigersModule.create("Karolek", 94, true, []);
-     this.state = {
-       currentTiger: tigersModule.getAll()[0]
-     };
-  }
-
-  onTigerClick = (tiger) => {
-    this.setState({currentTiger: tiger});
-  }
-
   render() {
+    drewnoModule.create("Szara", 20, true, [new Klasa("tartak")]);
+    drewnoModule.create("Biala", 30, true, []);
     return (
       <div className="App">
         <header className="App-header">
-          <TigerListComponent tigers={tigersModule.getAll()} onTigerClick={this.onTigerClick}/>
-          <TigerDetailsComponent tiger={this.state.currentTiger}/>
+          <DrewnoListComponent drzewa={drewnoModule.getAll()}/>
+          <DrewnoDetailsComponent drzewa={drewnoModule.getAll()}/>
+          <p>
+            Edit <code>src/App.js</code> and save to reload.
+          </p>
         </header>
       </div>
     );

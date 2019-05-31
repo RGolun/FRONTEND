@@ -1,8 +1,8 @@
-class Animal {
-    constructor(name, weight) {
-        this.name = name;
-        this.weight = weight;
+class Drewno {
+    constructor(gatunek, dlugosc) {
+        this.gatunek = gatunek;
+        this.dlugosc = dlugosc;
     }
 }
 
-export default Animal
+export default Drewno
