@@ -14,7 +14,7 @@ class DrzewaFormComponent extends Component {
     }
 
     onChange = (e) => {
-        this.setState({ [e.target.gatunek]: e.target.value });
+        this.setState({ [e.target.name]: e.target.value });
     }
 
     onIsTartakChange = () => {

@@ -1,11 +1,11 @@
 import Drewno from '../models/Drewno'
 
-const drewnoModule = (() => {
+const drzewaModule = (() => {
 
     let drzewa = [];
 
     let _findByGatunek = (gatunek) => {
-        return drzewa.find(t => t.gatunek === gatunek)
+        return drzewa.find(d => d.gatunek === gatunek)
     };
 
     return {
@@ -13,17 +13,17 @@ const drewnoModule = (() => {
             if (_findByGatunek(gatunek))
                 console.log("Drewno o tym gatunku juz istnieje")
             else
-                drzewa.push(new Drewno (gatunek, dlugosc, srednica, klasa));
+                drzewa.push(new Drewno (drewno.gatunek, drewno.dlugosc, drewno.isTartak, drewno.klasa));
         },
         update: (drewno) => {
-            let idx = drzewa.findIndex(t => t.gatunek === drewno.gatunek);
+            let idx = drzewa.findIndex(d => d.gatunek === drewno.gatunek);
             if(idx < 0)
                 console.log(`Drewno o gatunku '${drewno.gatunek}' nie istnieje.`);
             else
                 drzewa[idx] = drewno;
         },
         delete: (gatunek) => {
-            let idx = drzewa.findIndex(t => t.gatunek === gatunek);
+            let idx = drzewa.findIndex(d => d.gatunek === gatunek);
             if(idx < 0)
                 console.log(`Drewno o gatunku '${gatunek}' nie istnieje`)
             else
@@ -39,4 +39,4 @@ const drewnoModule = (() => {
     }
 })();
 
-export default drewnoModule;
+export default drzewaModule;

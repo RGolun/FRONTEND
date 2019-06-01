@@ -3,7 +3,7 @@
 Object.defineProperty(exports, "__esModule", {
   value: true
 });
-exports.default = void 0;
+exports["default"] = void 0;
 
 var _Drewno2 = _interopRequireDefault(require("./Drewno"));
 
@@ -32,13 +32,13 @@ var Brzoza =
 function (_Drewno) {
   _inherits(Brzoza, _Drewno);
 
-  function Brzoza(gatunek, dlugosc, srednica, klasa) {
+  function Brzoza(gatunek, dlugosc, isTartak, klasa) {
     var _this;
 
     _classCallCheck(this, Brzoza);
 
     _this = _possibleConstructorReturn(this, _getPrototypeOf(Brzoza).call(this, gatunek, dlugosc));
-    _this.srednica = srednica;
+    _this.isTartak = isTartak;
     _this.klasa = klasa;
     return _this;
   }
@@ -46,12 +46,12 @@ function (_Drewno) {
   _createClass(Brzoza, [{
     key: "hasKlasa",
     get: function get() {
-      return this.srednica.length > 0;
+      return this.klasa.length > 0;
     }
   }]);
 
   return Brzoza;
-}(_Drewno2.default);
+}(_Drewno2["default"]);
 
 var _default = Brzoza;
-exports.default = _default;
+exports["default"] = _default;

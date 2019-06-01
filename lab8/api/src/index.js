@@ -1,21 +1,23 @@
-import drewnoModule from './services/drewnoModule'
+import drzewaModule from './services/drzewaModule'
 
 import express from 'express';
 import bodyParser from 'body-parser'
+import cors from 'cors'
 
 let app = express();
 app.use(bodyParser.urlencoded({ extended: true }));
 app.use(bodyParser.json());
+app.use(cors());
 
-app.get('/api/', (req, res) => res.send('Hello drewno!'));
+app.get('/api/', (req, res) => res.send('Hello drzewa!'));
 
-app.get('/api/drewno', (req, res) => res.send(drewnoModule.getAll()));
+app.get('/api/drzewa', (req, res) => res.send(drzewaModule.getAll()));
 
-app.post('/api/drewno', (req, res) => {
-    drewnoModule.create(req.body);
+app.post('/api/drzewa', (req, res) => {
+    drzewaModule.create(req.body);
     res.sendStatus(200);
 });
 
-app.get('/api/drewno/:name', (req, res) => res.send(drewnoModule.findByName(req.params.name)));
+app.get('/api/drzewa/:gatunek', (req, res) => res.send(drzewaModule.findByGatunek(req.params.name)));
 
 app.listen(4000, () => console.log('Api listening on port 4000'));
