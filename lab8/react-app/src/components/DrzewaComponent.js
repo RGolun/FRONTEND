@@ -26,7 +26,7 @@ class DrzewaComponent extends Component {
             <div>
                 <DrzewaFormComponent onDrewnoSubmited={this.getAllDrzewa}/>
                 <br/>
-                <DrzewaListComponent drzewa={this.state.Drzewa} onDrewnoClick={this.onDrewnoClick}/>
+                <DrzewaListComponent drzewa={this.state.drzewa} onDrewnoClick={this.onDrewnoClick}/>
                 <br/>
                 <DrewnoDetailComponent drewno={this.state.currentDrewno}/>
             </div>
